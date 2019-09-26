@@ -35,7 +35,7 @@ def dear_name(x):
 
 
 def add(x, y):
-    print(x, "+", y, "=", x + y)
+    return x + y
 
 
 def main():
@@ -53,7 +53,8 @@ def main():
     happy_birthday()
     dear_name("Scoutie")
     happy_birthday()
-    add(7, 8)
+    answer = add(7, 8)
+    print("The answer is", answer)
 
 
 main()
