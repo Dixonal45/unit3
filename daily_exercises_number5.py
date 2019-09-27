@@ -3,14 +3,16 @@
 # daily exercise number 5
 import math
 
+
 def triangle_sides(a, b, c):
     s = (a + b + c)/2
-    area = math.sqrt(s * ())
+    area = math.sqrt(s * (s - a) * (s - b) * (s - c))
+    return area
 
 
 def main():
     answer = triangle_sides(3, 4, 6)
-    print("The area of the triangle is not", answer)
+    print("The area of the triangle is", answer)
 
 
 main()
