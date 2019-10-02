@@ -21,11 +21,11 @@ def area_of_rectangle(length, width):
 
 
 def surface_area(length, width, height):
-    return (area_of_rectangle(length, width) * 2) + (area_of_rectangle(height, width) * 2)
+    return (area_of_rectangle(length, width) * 2) + (area_of_rectangle(height, width) * 2) + (area_of_rectangle(height, length) * 2)
 
 
 def main():
-    surface_area()
+    print(surface_area(5, 3, 4))
 
 
 main()
