@@ -4,28 +4,57 @@
 
 
 def input_length():
+    """
+    This function gets user input for the length of the rectangle
+    :return: The length of the rectangle
+    """
     return float(input("What is the length of the rectangle?"))
 
 
 def input_width():
-    width = float(input("What is the width of the rectangle?"))
-    return width
+    """
+    This function gets user input for the width of the rectangle
+    :return: The width of the rectangle
+    """
+    return float(input("What is the width of the rectangle?"))
 
 
 def input_height():
+    """
+    This function gets user input for the height of the rectangle
+    :return: The height of the rectangle
+    """
     return float(input("What is the height of the rectangle?"))
 
 
-def area_of_rectangle(length, width):
-    return length * width
+def area_of_rectangle(a, b):
+    """
+    This function finds the area of a rectangle
+    :param a: Side 'a' of the rectangle
+    :param b: Side 'b' of the rectangle
+    :return: The area of the rectangle
+    """
+    return a * b
 
 
 def surface_area(length, width, height):
-    return (area_of_rectangle(length, width) * 2) + (area_of_rectangle(height, width) * 2) + (area_of_rectangle(height, length) * 2)
+    """
+    This function finds the surface area of the rectangle
+    :param length: The length of the rectangle from the user's input
+    :param width: The width of the rectangle from the user's input
+    :param height: The height of the rectangle from the user's input
+    :return: The surface area of the rectangle
+    """
+    return (area_of_rectangle(length, width) * 2) + (area_of_rectangle(length, height) * 2) \
+        + (area_of_rectangle(width, height) * 2)
 
 
 def main():
-    print(surface_area(5, 3, 4))
+    length = input_length()
+    width = input_width()
+    height = input_height()
+    print(surface_area(length, width, height))
 
 
-main()
+if __name__ == '__main__':
+    main()
